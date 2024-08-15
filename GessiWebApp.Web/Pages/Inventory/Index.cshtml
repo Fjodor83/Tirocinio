@@ -1,0 +1,27 @@
+﻿@page
+@model GessiWebApp.Web.Pages.Inventory.IndexModel
+@{
+    ViewData["Title"] = "Inventario";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Descrizione</th>
+            <th>Giacenza Totale</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var material in Model.Materials)
+        {
+            <tr>
+                <td>@material.Code</td>
+                <td>@material.Description</td>
+                <td>@material.TotalInventory</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,6 @@
+@GessiWebApp.API_HostAddress = http://localhost:5264
+
+GET {{GessiWebApp.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

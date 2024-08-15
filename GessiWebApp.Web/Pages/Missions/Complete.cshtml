@@ -1,0 +1,26 @@
+﻿@page
+@model GessiWebApp.Web.Pages.Missions.CompleteModel
+@{
+}
+<h1>@ViewData["Title"]</h1>
+
+<h3>Sei sicuro di voler completare questa missione?</h3>
+<div>
+    <h4>Missione</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission.Id)
+        </dd>
+        <!-- Aggiungi altri campi della missione qui -->
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Mission.Id" />
+        <input type="submit" value="Completa" class="btn btn-danger" /> |
+        <a asp-page="./Index">Torna alla Lista</a>
+    </form>
+</div>

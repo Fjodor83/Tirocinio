@@ -1,0 +1,25 @@
+﻿@page
+@model GessiWebApp.Web.Pages.Movements.IncomingMovementModel
+@{
+    ViewData["Title"] = "Movimento in Entrata";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Movement.MaterialId">Materiale</label>
+        <select asp-for="Movement.MaterialId" class="form-control">
+            <!-- Popolare con la lista dei materiali -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Movement.Quantity">Quantità</label>
+        <input asp-for="Movement.Quantity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Movement.Notes">Note</label>
+        <textarea asp-for="Movement.Notes" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Registra Movimento</button>
+</form>
